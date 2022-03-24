@@ -1,5 +1,5 @@
 <template>
-  <div class="col-6 col-md-3 col-lg-2 card-disc bg-light">
+  <div class="col-6 col-md-3 col-lg-2 card-disc">
       <img class="img-fluid" :src="discData.poster" :alt="discData.author">
       <h2>{{discData.title}}</h2>
       <h3>{{discData.author}}</h3>
@@ -19,11 +19,15 @@ export default {
 
 <style lang="scss" scoped>
 .card-disc {
-    margin: .5rem;
-    padding: .5rem;
+  background-color: rgb(19%, 23%, 27%);
+    margin: 1rem;
+    padding: 1rem;
 }
 
 h2  {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
     &::after {
         content: '';
         display: block;
@@ -31,5 +35,9 @@ h2  {
         padding: .5rem;
         width: 50%;
     }
+}
+h3,
+h4 {
+  color: rgb(39%, 39%, 39%);
 }
 </style>

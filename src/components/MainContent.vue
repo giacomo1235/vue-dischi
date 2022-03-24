@@ -1,7 +1,7 @@
 <template>
-  <main class="bg-dark">
+  <main>
       <div class="container">
-          <div class="row d-flex justify-content-center bg-dark">
+          <div class="row d-flex justify-content-center">
               <DiscCard v-for="disc in arrDiscs" :key="disc.poster" :disc-data ="disc" />
           </div>
       </div>
@@ -29,5 +29,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+main {
+  background-color: rgb(13%, 18%, 23%);
+}
 
 </style>
