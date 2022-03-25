@@ -5,7 +5,8 @@
         <a class="navbar-brand col-4" href="#">
           <img src="Spotify_logo_without_text.svg.png" alt="" width="30" height="24">
         </a>
-        <SearchGenere @search="setSearchString" />      </div>
+        <SearchGenere @search="setSearchString" />
+      </div>
     </div>
   </nav>
 </template>
