@@ -3,7 +3,7 @@
       <div class="container">
           <div class="loading" v-if="arrDiscs == null">sto caricando</div>
           <div v-else class="row d-flex justify-content-center">
-              <DiscCard v-for="disc in arrDiscs" :key="disc.poster" :disc-data ="disc" />
+              <DiscCard v-for="disc in searchGenere()" :key="disc.poster" :disc-data ="disc" />
           </div>
       </div>
   </main>
@@ -19,8 +19,17 @@ export default {
       arrDiscs: null
     }
   },
+  props: {
+    searchString: String
+  },
   components: {
     DiscCard
+  },
+  methods: {
+    searchGenere () {
+      console.log(this.searchString, 'prova')
+      return this.arrDiscs.filter((disc) => disc.genre.toLowerCase().includes(this.searchString.toLowerCase()))
+    }
   },
   created () {
     /* setInterval(() => axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((response) => { this.arrDiscs = response.data.response }), 2000

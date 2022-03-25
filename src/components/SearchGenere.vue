@@ -1,5 +1,5 @@
 <template>
-  <select class="form-select col-4" aria-label="Default select example" @change="onChange" v-model="genere">
+  <select class="form-select col-4" aria-label="Default select example" @change="onChange"> <!--  -->
           <option selected>Filtra per Genere</option>
           <option value="rock">Rock</option>
           <option value="pop">Pop</option>
@@ -19,7 +19,8 @@ export default {
   methods: {
     onChange (event) {
       this.genere = event.target.value
-      console.log(event.target.value)
+      console.log(this.genere)
+      this.$emit('search', this.genere)
     }
   }
 

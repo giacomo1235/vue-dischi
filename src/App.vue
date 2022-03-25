@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <HeaderDischi/>
-    <MainContent />
+    <HeaderDischi @search="searchRilevato"/>
+    <MainContent :search-string="this.genere"/>
     <FooterDischi />
   </div>
 </template>
@@ -17,7 +17,17 @@ export default {
     HeaderDischi,
     MainContent,
     FooterDischi
-
+  },
+  data () {
+    return {
+      genere: ''
+    }
+  },
+  methods: {
+    searchRilevato (datiComponente) {
+      this.genere = datiComponente
+      console.log(datiComponente)
+    }
   }
 }
 </script>
