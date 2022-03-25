@@ -1,6 +1,6 @@
 <template>
   <select class="form-select col-4" aria-label="Default select example" @change="onChange"> <!--  -->
-          <option selected>Filtra per Genere</option>
+          <option value="" selected>Filtra per Genere</option>
           <option value="rock">Rock</option>
           <option value="pop">Pop</option>
           <option value="jazz">Jazz</option>

@@ -3,7 +3,7 @@
       <div class="container">
           <div class="loading" v-if="arrDiscs == null">sto caricando</div>
           <div v-else class="row d-flex justify-content-center">
-              <DiscCard v-for="disc in searchGenere()" :key="disc.poster" :disc-data ="disc" />
+              <DiscCard v-for="disc in searchGenere" :key="disc.poster" :disc-data ="disc" />
           </div>
       </div>
   </main>
@@ -25,7 +25,7 @@ export default {
   components: {
     DiscCard
   },
-  methods: {
+  computed: {
     searchGenere () {
       console.log(this.searchString, 'prova')
       return this.arrDiscs.filter((disc) => disc.genre.toLowerCase().includes(this.searchString.toLowerCase()))
