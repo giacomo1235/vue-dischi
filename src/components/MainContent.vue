@@ -23,9 +23,9 @@ export default {
     DiscCard
   },
   created () {
-    setInterval(() => axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((response) => { this.arrDiscs = response.data.response }), 2000
-    )
-    /* axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((response) => { this.arrDiscs = response.data.response }) */
+    /* setInterval(() => axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((response) => { this.arrDiscs = response.data.response }), 2000
+    ) */
+    axios.get('https://flynn.boolean.careers/exercises/api/array/music').then((response) => { this.arrDiscs = response.data.response })
   }
 
 }
