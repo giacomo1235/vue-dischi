@@ -1,7 +1,7 @@
 <template>
   <main>
       <div class="container">
-          <div class="loading" v-if="arrDiscs == null">sto caricando</div>
+          <div class="loading" v-if="arrDiscs === null">sto caricando</div>
           <div v-else class="row d-flex justify-content-center">
               <DiscCard v-for="disc in searchGenere" :key="disc.poster" :disc-data ="disc" />
           </div>

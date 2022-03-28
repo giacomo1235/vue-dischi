@@ -25,6 +25,7 @@ export default {
 }
 
 h2  {
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: white;
   font-weight: 600;
